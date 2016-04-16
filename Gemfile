@@ -23,14 +23,17 @@ gem 'jbuilder', '~> 2.0'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0', group: :doc
 
-# Use ActiveModel has_secure_password
-# gem 'bcrypt', '~> 3.1.7'
+gem 'thin'
 
-# Use Unicorn as the app server
-# gem 'unicorn'
+#gemas para la aplicación
+gem 'activerecord-tableless', '~> 1.3', '>= 1.3.4'
+gem 'compass-rails', '~> 3.0', '>= 3.0.2'
+gem 'figaro', '~> 1.1', '>= 1.1.1'
+gem 'gibbon', '~> 2.2', '>= 2.2.3'
+gem 'google-drive', '~> 0.1.6b'
+gem 'high_voltage', '~> 2.4'
+gem 'simple_form', '~> 3.2', '>= 3.2.1'
 
-# Use Capistrano for deployment
-# gem 'capistrano-rails', group: :development
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
@@ -43,5 +46,10 @@ group :development do
 
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
+
+  gem 'better_errors', '~> 2.1', '>= 2.1.1'
+  gem 'quiet_assets', '~> 1.1'
+  gem 'rails_layout', '~> 1.0', '>= 1.0.29'
+
 end
 
