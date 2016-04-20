@@ -16,6 +16,12 @@ header {
   margin-bottom: 20px;
   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
+
+ul {
+display:flex; 
+justify-content: flex-end;
+}
+
 ul.nav li {
   display: inline;
 }

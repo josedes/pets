@@ -1,4 +1,7 @@
-<ul class="nav">
+<ul class="nav" >
+  
   <li><%= link_to 'Home', root_path %></li>
+  <li><%=link_to "Acerca de...", page_path("acercade")%></li>
+  <li><%=link_to "Contacto", page_path("contacto")%></li>
   <%= render 'layouts/navigation_links' %>
 </ul>
