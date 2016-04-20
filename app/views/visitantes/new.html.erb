@@ -1,5 +1,12 @@
 <h1>New Visitante</h1>
 
+<% content_for :sidebar do %> 
+<h3>Información de contacto</h3>
+ <p>Email: me@example.com</p>
+<% end %>
+
+<%=mensaje1%>
+
 <%= render 'form' %>
 
 <%= link_to 'Back', visitantes_path %>

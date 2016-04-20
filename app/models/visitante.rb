@@ -11,6 +11,8 @@ def fechacumple
 end 
 
 def conteo
+	Rails.logger.debug 'DEBUG: Entrando en el método conteo del modelo de visitante'
+
   hoy= Date.today
   $fechacumple= Date.new(hoy.year, $fechacumple.month, $fechacumple.day) 
   if $fechacumple > hoy

@@ -16,7 +16,15 @@ class VisitantesController < ApplicationController
 
   # GET /visitantes/new
   def new
+    Rails.logger.debug "DEBUG: entrando al método new"
     @visitante = Visitante.new
+    Rails.logger.debug "DEBUG: Nombre del usuario " + @visitante.nombre
+
+    flash[:notice] = 'Bienvenido!' 
+    flash[:alert] = 'Mi cumpleaños está cerca.' 
+    flash[:warnning] = 'CUIDADO PELIGRO.' 
+    flash[:success] = 'EXITO!'
+
     render 'visitantes/new' 
 
   end

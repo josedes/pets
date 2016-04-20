@@ -38,6 +38,7 @@ gem 'simple_form', '~> 3.2', '>= 3.2.1'
 gem 'mandrill-api', '~> 1.0', '>= 1.0.53'
 
 
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
@@ -53,6 +54,8 @@ group :development do
   gem 'better_errors', '~> 2.1', '>= 2.1.1'
   gem 'quiet_assets', '~> 1.1'
   gem 'rails_layout', '~> 1.0', '>= 1.0.29'
+
+  gem 'meta_request'
 
 end
 
