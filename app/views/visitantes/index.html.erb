@@ -1,17 +1,48 @@
+<p id="notice"><%= notice %></p>
 
+<h3>P&aacute;gina principal</h3>
+<p>Bienvenido a la página de: <%= @visitante.nombre %>.</p>
+<p>Yo nací:<%= @visitante.fechacumple %>.</p>
+<p>y me quedan unicamente  <%= @visitante.conteo %> d&iacute; para mi cumpleaños!</p> 
+
+
+<h1>Listing Visitantes</h1>
+
+<%if @visitantes  != nil%>
+
+  <table>
+    <thead>
+      <tr>
+        <th colspan="3"></th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <% @visitantes.each do |visitante| %>
+        <tr>
+          <td><%= link_to 'Show', visitante %></td>
+          <td><%= link_to 'Edit', edit_visitante_path(visitante) %></td>
+          <td><%= link_to 'Destroy', visitante, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+
+  <br>
+<%else%>
+
+    No existe visitantes almacenados
+
+<%end%>
+
+<%= link_to 'New Visitante', new_visitante_path %>
 
 
 <% content_for :title do %>Mascotas<% end %>
 <% content_for :description do %>Sitio Web para tu mascota<% end %> <section> 
-<section> 
-<div class="row">
-  <div class="small-6 large-2 columns"><%= image_tag "imagen3.jpg" %></div>
-  <div class="small-6 large-8 columns"><%= image_tag "imagen1.jpg" %></div>
-  <div class="small-12 large-2 columns"><%= image_tag "imagen2.jpg" %></div>
-</div>
-</section>
+
 <section>
-<div class="column"> <h4>Mantengase informado</h4> </div> <br />
+<div class="column"> <h4>Mantengase informado subscribiendose a la lista de correos</h4> </div> 
 <div class="column"> 
   <div class="form-centered">
     <%= simple_form_for @visitante do |f| %> 
