@@ -319,7 +319,7 @@ DEPENDENCIES
   coffee-rails (~> 4.1.0)
   compass-rails (~> 3.0, >= 3.0.2)
   figaro (~> 1.1, >= 1.1.1)
-  gibbon (~> 2.2, >= 2.2.3)
+  gibbon
   google-drive (~> 0.1.6b)
   high_voltage (~> 2.4)
   jbuilder (~> 2.0)

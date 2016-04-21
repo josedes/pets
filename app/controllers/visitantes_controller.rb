@@ -36,18 +36,16 @@ class VisitantesController < ApplicationController
   # POST /visitantes
   # POST /visitantes.json
   def create
-    @visitante = Visitante.new(visitante_params)
+    @visitante = Visitante.new(secure_params)
+    if @visitante.valid?
+       @visitante.subscripcion
+      flash[:notice] = "Registrado #{@visitante.email} en nuestra lista de correo." 
+      redirect_to root_path 
+  else
+      render :new 
+  end 
+end 
 
-    respond_to do |format|
-      if @visitante.save
-        format.html { redirect_to @visitante, notice: 'Visitante was successfully created.' }
-        format.json { render :show, status: :created, location: @visitante }
-      else
-        format.html { render :new }
-        format.json { render json: @visitante.errors, status: :unprocessable_entity }
-      end
-    end
-  end
 
   # PATCH/PUT /visitantes/1
   # PATCH/PUT /visitantes/1.json
@@ -83,4 +81,10 @@ class VisitantesController < ApplicationController
     def visitante_params
       params.fetch(:visitante, {})
     end
+
+
+  def secure_params
+    params.require(:visitante).permit(:email) 
+  end 
+
 end

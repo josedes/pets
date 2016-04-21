@@ -1,10 +1,12 @@
 Rails.application.routes.draw do
 
 
-  resources :visitantes
+  resources :visitantes, only: [:new, :create] 
+
   root "visitantes#index"
 
-  
+  resources :contactos, only: [:new, :create] 
+
   
 =begin
 

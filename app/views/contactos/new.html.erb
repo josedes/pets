@@ -1,0 +1,19 @@
+<% content_for :title do %>
+  Contacto
+<% end %> 
+
+<h3>Contacto</h3>
+
+<div class="form"> 
+<%= simple_form_for @contacto do |f| %> 
+
+
+<%= f.input :nombre, label: 'Su nombre por favor',  error: 'El nombre de usuario es obligatorio'%> 
+<%= f.input :email, placeholder: 'user@domain.com' %> 
+<%= f.input :mensaje, as: :text %> 
+
+<%= f.button :submit, 'Enviar', class: 'submit' %> 
+
+<% end %> 
+</div> 
+

@@ -29,7 +29,14 @@ gem 'thin'
 gem 'activerecord-tableless', '~> 1.3', '>= 1.3.4'
 gem 'compass-rails', '~> 3.0', '>= 3.0.2'
 gem 'figaro', '~> 1.1', '>= 1.1.1'
-gem 'gibbon', '~> 2.2', '>= 2.2.3'
+
+#remplazar:
+#gem 'gibbon',  '~>1.2.0'
+gem 'gibbon'
+#por 
+#gem 'gibbon', git: 'git://github.com/amro/gibbon.git'
+
+
 
 gem 'google-drive', '~> 0.1.6b'
 gem 'high_voltage', '~> 2.4'
