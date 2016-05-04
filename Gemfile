@@ -63,7 +63,13 @@ group :development do
   gem 'rails_layout', '~> 1.0', '>= 1.0.29'
 
   gem 'meta_request'
-
-  
 end
+
+
+group :production do 
+    gem 'pg'
+    gem 'rails_12factor' 
+   gem 'thin' 
+  end
+
 
